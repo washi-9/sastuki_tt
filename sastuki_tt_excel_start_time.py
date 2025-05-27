@@ -34,7 +34,7 @@ def time_check(time):
     else: # hoursが一桁の場合
         return "0" + str(result)
 
-file_name = 'datacopy.xlsx' # 編集するファイル名
+file_name = 'data.xlsx' # 編集するファイル名
 script_dir = os.path.dirname(os.path.abspath(__file__))
 path = os.path.join(script_dir, file_name)
 
