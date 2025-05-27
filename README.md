@@ -2,7 +2,7 @@
 
 　このプログラムはOUCC(大阪大学サイクリング部ツアー班)の活動の1つである「五月TT」の結果を計算するために作成された．
 sastuki_tt_excel.pyはExcel上のスタートとゴール時刻から所要時間を計算し，ソートした結果のExcelファイルを出力する．
-sastuki_tt_excel_start_input.pyはExcelのデータに開始時刻を一括設定するためのもの補助プログラムである．
+sastuki_tt_excel_start_input.pyはExcelのデータに開始時刻を一括設定するための補助プログラムである．
 
 # 環境
 - Python 3.x
