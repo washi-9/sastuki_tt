@@ -37,7 +37,7 @@ try:
 
     # はじめと終わりを設定
     row_start = 2 
-    row_end = 69 # 自動で判定してくれる
+    row_end = 100 # 自動で判定してくれる
 
     for row in range(row_start, row_end):
         if worksheet[f"A{row}"].value == None:
