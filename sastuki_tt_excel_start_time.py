@@ -34,7 +34,7 @@ def time_check(time):
     else: # hoursが一桁の場合
         return "0" + str(result)
 
-file_name = 'data.xlsx' # 編集するファイル名
+file_name = 'datacopy.xlsx' # 編集するファイル名
 script_dir = os.path.dirname(os.path.abspath(__file__))
 path = os.path.join(script_dir, file_name)
 
@@ -44,20 +44,24 @@ try:
 
     # はじめと終わりを設定
     row_start = 2 
-    row_end = 38
+    row_end = 100
 
     # パラメータ
     time_start = 110000
-    dist_time = 30
+    dist_time = 60
     people_number = 2
 
     for row in range(row_start, row_end, people_number):
+        if worksheet[f"A{row}"].value == None:
+            break
         for i in range(0, people_number):
+            if worksheet[f"A{row}"].value == None:
+                break
 
             # 編集する列を選択
-            b_cell = worksheet[f"B{row}"]
+            c_cell = worksheet[f"C{row}"]
             time_start = time_check(time_start)
-            b_cell.value = time_start
+            c_cell.value = time_start
             row += 1
 
         time_start += dist_time
